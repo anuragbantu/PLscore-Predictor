@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>PL Score Predictor</title>
+ 
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'> Score Predictor for matches between the Top 6 teams in </span><span class="heading_second">The English Premier League (EPL)</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            
+
+            
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Home Team Dropdown -->
+                    <select class="form-input align-center" name="home-team">
+                        <option value="none">--- Select a Home team ---</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Man City">Man City</option>
+                        <option value="Man United">Man United</option>
+                        <option value="Tottenham">Tottenham</option>
+                        
+                    </select><br>
+                    <!-- Away Team Dropdown -->
+                    <select class="form-input align-center" name="away-team">
+                        <option value="none">--- Select a Away team ---</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Man City">Man City</option>
+                        <option value="Man United">Man United</option>
+                        <option value="Tottenham">Tottenham</option>
+                    </select><br>
+                    
+			<input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+
+ 
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           
+           <p class='footer-description'>Made by Anurag Bantu.</p>
+       </div>	
+
+    </body>
+</html>
